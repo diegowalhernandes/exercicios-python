@@ -5,7 +5,7 @@
     "colab": {
       "name": "Desafio028.ipynb",
       "provenance": [],
-      "authorship_tag": "ABX9TyPI/ppwkKMDgqUNz+5xd4aA",
+      "authorship_tag": "ABX9TyMxo/x0FmUNtVxc9C5hl1W+",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -29,13 +29,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 16,
+      "execution_count": 19,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
         "id": "kcufodc7ydoG",
-        "outputId": "24650868-2ca5-4727-e52a-07b09eca360b"
+        "outputId": "ae2e082c-81f5-4bcf-c780-c288400b8141"
       },
       "outputs": [
         {
@@ -45,7 +45,8 @@
             "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n",
             "Pensei em um número entre 0 e 5, Tente adivinhar...\n",
             "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n",
-            "Em que número eu pensei? 4\n",
+            "Em que número eu pensei? 2\n",
+            "PROCESSANDO...\n",
             "PARABÉNS! Você acertou!\n"
           ]
         }
@@ -62,11 +63,15 @@
         "usuário venceu ou perdeu'''\n",
         "\n",
         "from random import randint\n",
+        "from time import sleep\n",
+        "\n",
         "computador = randint(0,5)\n",
         "print('-='*20)\n",
         "print('Pensei em um número entre 0 e 5, Tente adivinhar...')\n",
         "print('-='*20)\n",
         "jogador = int(input('Em que número eu pensei? '))\n",
+        "print('PROCESSANDO...')\n",
+        "sleep(2)\n",
         "if jogador == computador:\n",
         "  print('PARABÉNS! Você acertou!')\n",
         "else:\n",
