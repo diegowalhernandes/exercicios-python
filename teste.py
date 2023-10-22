@@ -1,1 +1,0 @@
-nome = str(input('nome: '))
