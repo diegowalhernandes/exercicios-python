@@ -1,24 +1,27 @@
-# Exercício: Jogo da Adivinhação
-# Crie um programa em Python que faça o seguinte:
-
-# O programa escolhe aleatoriamente um número entre 1 e 100.
-# O jogador tem que adivinhar o número.
-# O programa deve dar dicas como "Muito alto!" ou "Muito baixo!" até o jogador acertar.
-# Ao final, exiba o número de tentativas que o jogador usou.
-
 import random
 
+# Número secreto
 numero = random.randint(1, 100)
-seu_num = []
 cont = 0
 
+print("Bem-vindo ao Jogo da Adivinhação!")
+print("Tente adivinhar o número que estou pensando, entre 1 e 100.")
 
-while seu_num != numero:
-    seu_num = int(input("Escolha um numero de 1 a 100: "))
-    cont = cont + 1
-    if numero < seu_num:
-        print("Muito alto")
-    elif numero > seu_num:
-        print("Muito baixo")
-    else:
-        print(f"O numero escolhido foi {numero}, você acertou na {cont} vez")
+while True:
+    try:
+        # Entrada do jogador
+        seu_num = int(input("Escolha um número de 1 a 100: "))
+        cont += 1
+
+        # Dicas
+        if seu_num < 1 or seu_num > 100:
+            print("Por favor, escolha um número dentro do intervalo!")
+        elif seu_num < numero:
+            print("Muito baixo!")
+        elif seu_num > numero:
+            print("Muito alto!")
+        else:
+            print(f"Parabéns! O número escolhido foi {numero}. Você acertou em {cont} tentativas.")
+            break  # Sai do loop ao acertar
+    except ValueError:
+        print("Entrada inválida! Por favor, digite um número inteiro.")
