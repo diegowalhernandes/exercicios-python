@@ -10,13 +10,15 @@ import random
 
 numero = random.randint(1, 100)
 seu_num = []
+cont = 0
 
 
 while seu_num != numero:
     seu_num = int(input("Escolha um numero de 1 a 100: "))
+    cont = cont + 1
     if numero < seu_num:
         print("Muito alto")
     elif numero > seu_num:
         print("Muito baixo")
     else:
-        print(f"O numero escolhido foi {numero}, você acertou")
+        print(f"O numero escolhido foi {numero}, você acertou na {cont} vez")
