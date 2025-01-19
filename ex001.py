@@ -1,11 +1,10 @@
-# Números Pares e Ímpares
+# 1. Par ou Ímpar
+# Peça ao usuário um número inteiro e diga se ele é par ou ímpar.
 
-# Escreva um programa que peça um número inteiro e diga se ele é par ou ímpar.
 
-
-numero = int(input("Digite um número: "))
+numero = int(input("Digite um numero: "))
 
 if numero % 2 == 0:
-    print("Seu número é par")
+    print("numero é par")
 else:
-    print("Seu número é ímpar")
+    print("Numero é impar")
