@@ -25,3 +25,4 @@ while counter < days:
     items *= 2
     counter += 1
 print(items)
+
