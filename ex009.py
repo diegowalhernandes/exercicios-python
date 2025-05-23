@@ -1,24 +1,28 @@
-# FizzBuzz
-# FizzBuzz is a well known programming assignment, asked during interviews.
+# while Loops
+# You have a magic box that doubles the count of items you put, in every day.
+# The given program takes the initial count of the items and the number of days as input.
 
-# The given code solves the FizzBuzz problem and uses the words "Solo" and "Learn" instead of "Fizz" and "Buzz".
-# It takes an input n and outputs the numbers from 1 to n.
-# For each multiple of 3, print "Solo" instead of the number.
-# For each multiple of 5, prints "Learn" instead of the number.
-# For numbers which are multiples of both 3 and 5, output "SoloLearn".
+# Task
+# Write a program to calculate and output items' count on the last day.
 
-# You need to change the code to skip the even numbers, so that the logic only applies to odd numbers in the range.
+# Sample Input
+# 3
+# 2
 
-n = int(input())
+# Sample Output
+# 12
 
-for x in range(1, n):
-    if x % 2 == 0:
-        print()
-    elif x % 3 == 0 and x % 5 == 0:
-        print("SoloLearn")
-    elif x % 3 == 0:
-        print("Solo")
-    elif x % 5 == 0:
-        print("Learn")
-    else:
-        print(x)
+# Explanation
+# Day 1: 6 (3*2)
+# Day 2: 12 (6*2)
+
+items = int(input("Quantos items tem na caixa? "))
+days = int(input("Quantos dias terão? "))
+#your code goes here
+counter = 0
+
+while counter < days:
+    items *= 2
+    counter += 1
+print(items)
+
